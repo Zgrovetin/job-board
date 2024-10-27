@@ -36,6 +36,15 @@
            @endauth
        </ul>
     </nav>
+
+    @if(session('success'))
+        <div role="alert"
+             class="my-8 rounded-md border-l-4 border-green-300 bg-green-100 p-4 text-green-700 opacity-75">
+            <p class="font-bold">Success!</p>
+            <p>{{ session('success') }}</p>
+        </div>
+    @endif
+
     {{ $slot }}
     <div class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ..."></div>
 </body>
