@@ -46,6 +46,13 @@
             <p>{{ session('success') }}</p>
         </div>
     @endif
+    @if(session('error'))
+        <div role="alert"
+             class="my-8 rounded-md border-l-4 border-red-300 bg-red-100 p-4 text-red-700 opacity-75">
+            <p class="font-bold">Error!</p>
+            <p>{{ session('error') }}</p>
+        </div>
+    @endif
 
     {{ $slot }}
     <div class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ..."></div>
