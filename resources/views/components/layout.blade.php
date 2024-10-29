@@ -24,6 +24,9 @@
                        {{ auth()->user()->name ?? 'Anonymous' }}: Applications
                    </a>
                </li>
+           <li>
+               <a href="{{ route('my-jobs.index') }}">My jobs</a>
+           </li>
                <li>
                    <form action="{{ route('auth.destroy') }}" method="POST">
                        @csrf
