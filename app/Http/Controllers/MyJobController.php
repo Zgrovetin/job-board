@@ -19,7 +19,7 @@ class MyJobController extends Controller
                         'employer',
                         'jobApplications',
                         'jobApplications.user'
-                    ])->get()
+                    ])->withTrashed()->get()
                     ]
         );
     }
